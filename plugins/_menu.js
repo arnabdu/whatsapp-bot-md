@@ -95,8 +95,7 @@ bot.addCommand(
 		let msg =
 			'```' +
 			`
-			`
-╔═════ 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓 ═════❃
+			`╔═════ 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓 ═════❃
 ║
 ╠❐ 𝐔𝐒𝐄𝐑 : ${message.pushName}
 ║
@@ -112,6 +111,8 @@ bot.addCommand(
 ║
 ╠❐ 𝐓𝐎𝐓𝐀𝐋 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 : ${PLUGINS.count}
 ║
+╠❐ 𝐑𝐀𝐌 : ${getRam()}
+║
 ╠❐ 𝐔𝐏𝐓𝐈𝐌𝐄 : ${getUptime('t')}
 ║
 ╚═══════════════════════❃
@@ -125,7 +126,7 @@ bot.addCommand(
 `
 			for (const plugin of commands[command])
 				msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
-			msg += ` ╚═════════════════❃
+			msg += ` ╚════════════════❃
 `
 		}
 		await message.sendMessage(msg.trim())
