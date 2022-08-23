@@ -94,30 +94,38 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╭═════ METRO-BOT ════⊷
-┃❃╭──────────────
-┃❃│ User : ${message.pushName}
-┃❃│ Prefix : ${PREFIX}
-┃❃│ Time : ${date.toLocaleTimeString()}
-┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
-┃❃│ Date : ${date.toLocaleDateString('hi')}
-┃❃│ Version : ${VERSION}
-┃❃│ Plugins : ${PLUGINS.count}
-┃❃│ Ram : ${getRam()}
-┃❃│ Uptime : ${getUptime('t')}
-┃❃╰───────────────
-╰═════════════════⊷
+			`
+			`
+╔═════ 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓 ═════❃
+║
+╠❐ 𝐔𝐒𝐄𝐑 : ${message.pushName}
+║
+╠❐ 𝐏𝐑𝐄𝐅𝐈𝐗 : ${PREFIX}
+║
+╠❐ 𝐓𝐈𝐌𝐄 : ${date.toLocaleTimeString()}
+║
+╠❐ 𝐃𝐀𝐘 : ${date.toLocaleString('en', { weekday: 'long' })}
+║
+╠❐ 𝐃𝐀𝐓𝐄 : ${date.toLocaleDateString('hi')}
+║
+╠❐ 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 : ${VERSION}
+║
+╠❐ 𝐓𝐎𝐓𝐀𝐋 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 : ${PLUGINS.count}
+║
+╠❐ 𝐔𝐏𝐓𝐈𝐌𝐄 : ${getUptime('t')}
+║
+╚═══════════════════════❃
 ` +
 			'```'
 		for (const command in commands) {
-			msg += ` ╭─❏ ${textToStylist(
+			msg += ` ╔═❃ ${textToStylist(
 				command.toLowerCase(),
 				'smallcaps'
-			)} ❏
+			)} ╠❐
 `
 			for (const plugin of commands[command])
 				msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
-			msg += ` ╰─────────────────
+			msg += ` ╚═════════════════❃
 `
 		}
 		await message.sendMessage(msg.trim())
