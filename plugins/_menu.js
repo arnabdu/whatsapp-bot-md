@@ -119,10 +119,10 @@ bot.addCommand(
 			msg += ` ╔═❃ ${textToStylist(
 				command.toLowerCase(),
 				'smallcaps'
-			)} ╠❐
+			)} ❃
 `
 			for (const plugin of commands[command])
-				msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
+				msg += ` ╠❐ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
 			msg += ` ╚════════════════❃
 `
 		}
