@@ -94,7 +94,9 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╔════ 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓 ════❃
+			`╔════ 𝐀𝐁𝐃𝐔𝐊𝐊𝐀 ════❃
+║
+╠❐  𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 : 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓
 ║ 
 ╠❐  𝐏𝐑𝐄𝐅𝐈𝐗 : ${PREFIX}
 ║
@@ -116,14 +118,14 @@ bot.addCommand(
 ` +
 			'```'
 		for (const command in commands) {
-			msg += ` ╔═❃ ${textToStylist(
+			msg += `╔═❃ ${textToStylist(
 				command.toLowerCase(),
 				'smallcaps'
 			)} ❃
 `
 			for (const plugin of commands[command])
-				msg += ` ╠❐ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
-			msg += ` ╚════════════════❃
+				msg += `╠❐ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
+			msg += `╚════════════════❃
 `
 		}
 		await message.sendMessage(msg.trim())
