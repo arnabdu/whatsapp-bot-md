@@ -94,10 +94,10 @@ bot.addCommand(
 
 		let msg =
 			'```' +
-			`╭═══ LEVANTER ═══⊷
+			`╭═════ METRO-BOT ════⊷
 ┃❃╭──────────────
-┃❃│ Prefix : ${PREFIX}
 ┃❃│ User : ${message.pushName}
+┃❃│ Prefix : ${PREFIX}
 ┃❃│ Time : ${date.toLocaleTimeString()}
 ┃❃│ Day : ${date.toLocaleString('en', { weekday: 'long' })}
 ┃❃│ Date : ${date.toLocaleDateString('hi')}
