@@ -96,36 +96,34 @@ bot.addCommand(
 			'```' +
 			`╔════ 𝐌𝐄𝐓𝐑𝐎-𝐁𝐎𝐓 ════❃
 ║ 
-╠❐  Prefix : ${PREFIX}
+╠❐  𝐏𝐑𝐄𝐅𝐈𝐗 : ${PREFIX}
 ║
-╠❐  User : ${message.pushName}
+╠❐  𝐔𝐒𝐄𝐑: ${message.pushName}
 ║
-╠❐  Time : ${date.toLocaleTimeString()}
+╠❐  𝐓𝐈𝐌𝐄 : ${date.toLocaleTimeString()}
 ║
-╠❐  Day : ${date.toLocaleString('en', { weekday: 'long' })}
+╠❐  𝐃𝐀𝐘 : ${date.toLocaleString('en', { weekday: 'long' })}
 ║
-╠❐  Date : ${date.toLocaleDateString('hi')}
+╠❐  𝐃𝐀𝐓𝐄 : ${date.toLocaleDateString('hi')}
 ║
-╠❐  Version : ${VERSION}
+╠❐  𝐕𝐄𝐑𝐒𝐈𝐎𝐍 : ${VERSION}
 ║
-╠❐  Plugins : ${PLUGINS.count}
+╠❐  𝐓𝐎𝐓𝐀𝐋 𝐏𝐋𝐔𝐆𝐈𝐍𝐒 : ${PLUGINS.count}
 ║
-╠❐  Ram : ${getRam()}
-║
-╠❐  Uptime : ${getUptime('t')}
+╠❐  𝐔𝐏𝐓𝐈𝐌𝐄 : ${getUptime('t')}
 ║ 
 ╚═════════════════❃
 ` +
 			'```'
 		for (const command in commands) {
-			msg += ` ╭─❏ ${textToStylist(
+			msg += ` ╔═❃ ${textToStylist(
 				command.toLowerCase(),
 				'smallcaps'
-			)} ❏
+			)} ╠❐
 `
 			for (const plugin of commands[command])
 				msg += ` │ ${textToStylist(plugin.toUpperCase(), 'mono')}\n`
-			msg += ` ╰─────────────────
+			msg += ` ╚════════════════❃
 `
 		}
 		await message.sendMessage(msg.trim())
