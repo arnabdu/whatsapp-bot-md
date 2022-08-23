@@ -96,7 +96,7 @@ bot.addCommand(
 			'```' +
 			`
 			`╭═════ METRO-BOT ════⊷
-┃❃╭──────────────
+┃❃╭─────────────
 ┃❃│ User : ${message.pushName}
 ┃❃│ Prefix : ${PREFIX}
 ┃❃│ Time : ${date.toLocaleTimeString()}
